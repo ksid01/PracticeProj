@@ -14,10 +14,10 @@ jobs:
         run: npm install
 
       - name: linting
-        run: scripts.lint
+        run: npm run lint
 
       - name: testing
-        run: scripts.test
+        run: npm run test
 
       - name: building
-        run: scripts.build
+        run: npm run build

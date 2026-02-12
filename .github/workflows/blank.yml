@@ -1,0 +1,23 @@
+name: LintTestDeploy
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: read repo
+        uses: actions/checkout@v4
+
+      - name: install node js
+        uses: actions/setup-node@v6
+
+      - name: installing dependancy
+        run: npm install
+
+      - name: linting
+        run: lint
+
+      - name: testing
+        run: test
+
+      - name: building
+        run: build
